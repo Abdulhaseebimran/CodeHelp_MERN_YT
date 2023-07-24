@@ -1,0 +1,30 @@
+img{
+    margin-left: 10px;
+}
+
+.container{
+    border: 1px solid black;
+}
+
+/* .image1{
+    position: relative;
+    top: 200px;
+    left: 200px;
+    right: 400px;
+} */
+
+/* .image2{
+    position: absolute;
+    top: 200px;
+} */
+
+.container{
+    position: relative;
+    background-color: red;
+    height: 100vh;
+}
+
+.image3{
+    position: fixed;
+    top: 200px;
+}
