@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card 3 homework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #cdd6da;
+            background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 1000px;
+            height: 500px;
+            background-color: #4e094c;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover::before {
+            left: 0%;
+            /* Move the overlay to the right edge of the card */
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Adjust the overlay color and opacity */
+            transition: left 5s ease;
+            /* Add transition for smooth animation */
+        }
+
+
+        .textbox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: white;
+        }
+
+        #contentBox {
+            width: 75%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        #descBox p {
+            font-size: 1.1rem;
+        }
+
+        #imgBox {
+            width: 50%;
+            height: 100%;
+            background-image: url("./images/icon.jpg");
+            background-color: white;
+            background-size: contain;
+            background-position: center;
+        }
+
+        #stats {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+
+        #number {
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+
+        #unit {
+            font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="textbox">
+                <div id="contentBox">
+                    <h1 id="headingbox">Get insights that help your business grow</h1>
+                    <div id="desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolore similique atque eius
+                            quaerat ducimus praesentium consectetur voluptatem natus labore.</p>
+                    </div>
+                    <!-- stats -->
+                    <div id="stats">
+                        <div>
+                            <div id="number">
+                                10K+
+                            </div>
+                            <div id="unit">
+                                Comments
+                            </div>
+                        </div>
+                        <!-- another -->
+                        <div>
+                            <div id="number">
+                                214
+                            </div>
+                            <div id="unit">
+                                Paid Users
+                            </div>
+                        </div>
+                        <!-- another -->
+                        <div>
+                            <div id="number">
+                                12M+
+                            </div>
+                            <div id="unit">
+                                Views
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- image box -->
+            <div id="imgBox">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
